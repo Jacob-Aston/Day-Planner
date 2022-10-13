@@ -8,12 +8,21 @@ const hours = ['9','10','11','12','1','2','3','4','5'];
 $currentDay.text(now);
 
 const loadTimeBlocks = () => {
-    var timeBlock = "<div class ='time-block row'>howdy2</div>"
-
-    hours.forEach(function(){
-        $container.append(timeBlock);
-
-    })
+    for (i = 0; i < hours.length; i++) {
+    var timeBlock = $('<div class ="time-block row">'+ hours[i] + '</div>')
+    $container.append(timeBlock);
+    }
 }
 
+const fillTimeBlocks = () => {
+    const $timeBlocks = $("div.container > div")
+    $timeBlocks.array.forEach(element => {
+        var timeFill = $('<div class="hour"></div>')
+        element.append(timeFill)
+    });
+}
+
+
+
 loadTimeBlocks()
+fillTimeBlocks()
