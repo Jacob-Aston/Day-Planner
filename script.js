@@ -1,7 +1,7 @@
 const $currentDay = $("#currentDay");
 const $container = $("div");
 const $timeBlocks = $("div.container > div");
-var now = dayjs();
+var now = dayjs().format("dddd-MMM-DD-YYYY");
 var currentHour = dayjs().hour();
 console.log(currentHour);
 
@@ -52,8 +52,6 @@ const hours = [
     time: "17",
   },
 ];
-
-//    , "10", "11", "12", "1", "2", "3", "4", "5"];
 
 $currentDay.text(now);
 
