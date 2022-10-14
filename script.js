@@ -43,7 +43,7 @@ const hours = [
   },
   {
     hour: "4pm",
-    description: "",
+    description: "yuh",
     time: "16",
   },
   {
@@ -76,11 +76,11 @@ const loadTimeBlocks = () => {
         '<div class="hour col-2">' +
         hours[i].hour +
         "</div>" +
-        '<input class="description col-8 ' +
+        '<textarea class="description col-8 ' +
         hourCheck(i) +
-        '">' +
+        '" readonly>' +
         hours[i].description +
-        "</input>" +
+        "</textarea>" +
         '<btn class="saveBtn btn col-2">save</btn>' +
         "</div>"
     );
@@ -89,3 +89,21 @@ const loadTimeBlocks = () => {
 };
 
 loadTimeBlocks();
+
+// //https://jsfiddle.net/GeJkU/
+// const divClicked = () => {
+//     var divHtml = $(this).html();
+//     var editableText = $("<textarea /");
+//     editableText.val(divHtml);
+//     $(this).replaceWith(editableText);
+//     editableText.focus();
+//     editableText.blur(editableTextBlurred)
+// }
+// const editableTextBlurred = () => {
+//     var html = $(this).val();
+//     var viewableText = $("<div>");
+//     viewableText.html(html);
+//     $(this).replaaceWith(viewableText);
+//     $(viewableText).click(divClicked);
+// }
+
