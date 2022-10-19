@@ -67,7 +67,7 @@ const loadTimeBlocks = () => {
           ${label}
         </div>
         <form class="row col-10" id="${id}">
-          <textarea class="description col-9 ${hourCheck(index)}" name="description" value="${description}" />
+          <textarea class="description col-9 ${hourCheck(index)}" name="description" value="${description}">${description}</textarea>
           <button type="submit" class="saveBtn btn col-3">save</button>
         </form>
       </div>
